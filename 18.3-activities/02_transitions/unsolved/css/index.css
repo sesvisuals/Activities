@@ -1,7 +1,7 @@
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
   justify-items: center;
   font-family: helvetica, arial, sans-serif;
@@ -14,16 +14,31 @@
 }
 .hoverMe {
   grid-area: hover;
-  background-color: red;
+  background-color: orangered;
+  color: aqua;
+  width: 150px;
+  text-align: center;
+  height: 50px;
+  transition: all .4s ease;
+}
+.inactiveMe {
+  grid-area: 200px;
+  background-color: black;
   color: white;
   width: 150px;
   text-align: center;
   height: 50px;
-  /* Add the css property transition here! */
-
+  transition: all .4s ease;
 }
 /* active state */
 .hoverMe:hover {
-  /* Add your hover state css here. */
-
+  background-color: aqua;
+  color: orangered;
+}
+.inactiveMe:active {
+  background-color: white;
+  box-shadow: black;
+  color: orangered;
+  box-shadow: 10px;
+  font-size: 20px;
 }
